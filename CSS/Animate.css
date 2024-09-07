@@ -1,0 +1,371 @@
+/* --------------Animated text -------------*/
+
+.text_1 {
+  animation: text1;
+  -webkit-animation: text1;
+}
+
+.text_2 {
+  animation: text2;
+  -webkit-animation: text2;
+}
+
+.text_3 {
+  animation: text3;
+  -webkit-animation: text3;
+}
+
+.text_4 {
+  animation: text4;
+  -webkit-animation: text4;
+}
+
+.text_1,
+.text_2,
+.text_3,
+.text_4 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 17s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+
+.text_1::after,
+.text_2::after,
+.text_3::after,
+.text_4::after {
+  content: "|";
+  position: absolute;
+  animation: caret infinite;
+  animation-duration: 1s;
+}
+
+@keyframes text4 {
+  0%,
+  75%,
+  100% {
+    width: 0;
+  }
+  80%,
+  95% {
+    width: 165px;
+  }
+}
+
+@keyframes text3 {
+  0%,
+  50%,
+  75%,
+  100% {
+    width: 0;
+  }
+  55%,
+  70% {
+    width: 125px;
+  }
+}
+
+@keyframes text2 {
+  0%,
+  25%,
+  50%,
+  100% {
+    width: 0;
+  }
+  30%,
+  45% {
+    width: 125px;
+  }
+}
+
+@keyframes text1 {
+  0%,
+  25%,
+  100% {
+    width: 0;
+  }
+  5%,
+  20% {
+    width: 110px;
+  }
+}
+
+@keyframes caret {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 769px) {
+  .text_1,
+  .text_2,
+  .text_3,
+  .text_4 {
+    font-size: 2.5rem;
+  }
+
+  @keyframes text4 {
+    0%,
+    75%,
+    100% {
+      width: 0;
+    }
+    80%,
+    95% {
+      width: 270px;
+    }
+  }
+
+  @keyframes text3 {
+    0%,
+    50%,
+    75%,
+    100% {
+      width: 0;
+    }
+    55%,
+    70% {
+      width: 210px;
+    }
+  }
+
+  @keyframes text2 {
+    0%,
+    25%,
+    50%,
+    100% {
+      width: 0;
+    }
+    30%,
+    45% {
+      width: 210px;
+    }
+  }
+
+  @keyframes text1 {
+    0%,
+    25%,
+    100% {
+      width: 0;
+    }
+    5%,
+    20% {
+      width: 190px;
+    }
+  }
+}
+
+/* -------------------------Animated text -------------------------------*/
+
+/* --------------------------NUM Animation------------------------------ */
+.count1::before {
+  content: counter(count);
+  font: 400 2rem system-ui;
+  animation: counter1 1s linear;
+  -webkit-animation: counter1 1s linear;
+  margin: 0px;
+  padding: 0px;
+  white-space: nowrap;
+  display: inline-block;
+  counter-reset: count 450;
+  position: relative;
+  bottom: -7px;
+}
+
+@keyframes counter1 {
+  0% {
+    counter-increment: count -450;
+  }
+  10% {
+    counter-increment: count -423;
+  }
+  20% {
+    counter-increment: count -395;
+  }
+  30% {
+    counter-increment: count -365;
+  }
+  40% {
+    counter-increment: count -290;
+  }
+  50% {
+    counter-increment: count -220;
+  }
+  60% {
+    counter-increment: count -150;
+  }
+  70% {
+    counter-increment: count -110;
+  }
+  80% {
+    counter-increment: count -80;
+  }
+  90% {
+    counter-increment: count -11;
+  }
+  100% {
+    counter-increment: count -7;
+  }
+}
+
+/* ------------------------------------ */
+
+.count2::before {
+  content: counter(count);
+  font: 400 2rem system-ui;
+  animation: counter2 1s linear;
+  -webkit-animation: counter2 1s linear;
+  margin: 0px;
+  padding: 0px;
+  white-space: nowrap;
+  display: inline-block;
+  counter-reset: count 25;
+  position: relative;
+  bottom: -7px;
+}
+
+@keyframes counter2 {
+  0% {
+    counter-increment: count -25;
+  }
+  10% {
+    counter-increment: count -23;
+  }
+  20% {
+    counter-increment: count -20;
+  }
+  30% {
+    counter-increment: count -18;
+  }
+  40% {
+    counter-increment: count -16;
+  }
+  50% {
+    counter-increment: count -14;
+  }
+  60% {
+    counter-increment: count -12;
+  }
+  70% {
+    counter-increment: count -10;
+  }
+  80% {
+    counter-increment: count -8;
+  }
+  90% {
+    counter-increment: count -6;
+  }
+  100% {
+    counter-increment: count -4;
+  }
+}
+/* --------------------------------------------- */
+
+.count3::before {
+  content: counter(count);
+  font: 400 2rem system-ui;
+  animation: counter3 1s linear;
+  -webkit-animation: counter3 1s linear;
+  margin: 0px;
+  padding: 0px;
+  white-space: nowrap;
+  display: inline-block;
+  counter-reset: count 550;
+  position: relative;
+  bottom: -7px;
+}
+
+@keyframes counter3 {
+  0% {
+    counter-increment: count -550;
+  }
+  10% {
+    counter-increment: count -523;
+  }
+  20% {
+    counter-increment: count -495;
+  }
+  30% {
+    counter-increment: count -465;
+  }
+  40% {
+    counter-increment: count -390;
+  }
+  50% {
+    counter-increment: count -320;
+  }
+  60% {
+    counter-increment: count -250;
+  }
+  70% {
+    counter-increment: count -210;
+  }
+  80% {
+    counter-increment: count -180;
+  }
+  90% {
+    counter-increment: count -111;
+  }
+  100% {
+    counter-increment: count -107;
+  }
+}
+
+/* -------------------------------------------------------- */
+.count4::before {
+  content: counter(count);
+  font: 400 2rem system-ui;
+  animation: counter4 1s linear;
+  -webkit-animation: counter4 1s linear;
+  margin: 0px;
+  padding: 0px;
+  white-space: nowrap;
+  display: inline-block;
+  counter-reset: count 48;
+  position: relative;
+  bottom: -7px;
+}
+
+@keyframes counter4 {
+  0% {
+    counter-increment: count -48;
+  }
+  10% {
+    counter-increment: count -43;
+  }
+  20% {
+    counter-increment: count -40;
+  }
+  30% {
+    counter-increment: count -38;
+  }
+  40% {
+    counter-increment: count -36;
+  }
+  50% {
+    counter-increment: count -34;
+  }
+  60% {
+    counter-increment: count -32;
+  }
+  70% {
+    counter-increment: count -30;
+  }
+  80% {
+    counter-increment: count -28;
+  }
+  90% {
+    counter-increment: count -26;
+  }
+  100% {
+    counter-increment: count -14;
+  }
+}
+
+/* --------------------------NUM Animation------------------------------ */

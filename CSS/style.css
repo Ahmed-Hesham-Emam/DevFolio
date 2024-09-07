@@ -1,0 +1,592 @@
+/* :root {
+  scroll-padding-top: 82px;
+} */
+
+/* ---------------------------------------General stuff------------------------------------- */
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #0078ff #f5f5f5;
+  scrollbar-arrow-color: #0078ff;
+  scroll-padding-top: 82px;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.box1,
+.box2 {
+  background-color: #f5f5f5;
+  width: 100%;
+  margin-top: 4rem;
+  padding: 2rem;
+}
+
+.liner {
+  margin: auto;
+  height: 5px;
+  background-color: #0078ff;
+  width: 50px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 120, 255, 0.7);
+}
+
+.w-85 {
+  width: 85%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.box-head {
+  margin-bottom: 4rem;
+}
+
+.box-head h3 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.box-head p {
+  color: #4e4e4e;
+}
+
+/* ---------------------------------------General stuff------------------------------------- */
+
+/* ---------------------------------------NavBar--------------------------------------- */
+@media (max-width: 991px) {
+  .navbar-mobile {
+    position: fixed;
+    overflow-y: auto;
+    top: 60px;
+    right: 30px;
+    left: 30px;
+    bottom: 50px;
+    background: white;
+    box-shadow: 300px 300px 300px 300px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+    z-index: 999;
+  }
+
+  .navbar-mobile ul li a {
+    color: #4e4e4e !important;
+  }
+
+  .navbar-mobile ul li:hover > a {
+    color: #0078ff !important;
+  }
+}
+/* ----------------------- */
+.logo {
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+}
+
+.nav-line a {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  overflow: hidden;
+}
+
+.nav-line > a::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 80%;
+  height: 2px;
+  bottom: -27px;
+  left: 0;
+  background-color: white;
+  transition:all 300ms ease-in-out;
+  transform: translateX(-130%);
+  -webkit-transform: translateX(-130%);
+  -moz-transform: translateX(-130%);
+  -ms-transform: translateX(-130%);
+  -o-transform: translateX(-130%);
+  -webkit-transition:all 300ms ease-in-out;
+  -moz-transition:all 300ms ease-in-out;
+  -ms-transition:all 300ms ease-in-out;
+  -o-transition:all 300ms ease-in-out;
+}
+
+.nav-line a:hover::before {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+.navbar-nav .nav-link.active::before {
+  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+}
+/* ---------------------- */
+.drop-down .dropdown-menu li a {
+  color: #4e4e4e;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+@media (min-width: 992px) {
+  .deep-dropdown ul {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    left: 115px;
+    top: -10px;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  }
+
+  .deep-dropdown a {
+    color: #4e4e4e;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+  }
+
+  .deep-dropdown:hover ul {
+    display: block;
+    visibility: visible;
+  }
+
+  .drop-down:hover ul {
+    display: block;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  }
+  .drop-down .dropdown-menu li a:hover {
+    color: #0d6efd;
+  }
+}
+/* ---------------------------------------NavBar--------------------------------------- */
+
+/* -------------------------------------Hero------------------------------------------- */
+
+.background {
+  height: 100vh;
+  position: relative;
+  background-image: url(../Img/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wraper {
+  overflow: hidden;
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.wraper span {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 769px) {
+  h1 {
+    font-weight: 600;
+    font-size: 3rem;
+  }
+}
+/* -------------------------------------Hero------------------------------------------- */
+
+/* ------------------------------------About Me---------------------------------- */
+.box1 {
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+.box1 p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.darkin {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #1e1e1e;
+}
+
+.txt-left {
+  text-align: left;
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: #4e4e4e;
+}
+
+.underline {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #4e4e4e;
+}
+
+.underline::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 3px;
+  bottom: -12px;
+  left: 0;
+  background-color: #0078ff;
+}
+
+/* ------------------------------------About Me---------------------------------- */
+
+/* ------------------------------------Services---------------------------------- */
+.service-box {
+  box-shadow: 0 13px 8px -10px #00000010;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 1.55;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 0 10px #0078ff;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.service-content h2 {
+  font-weight: 500;
+  color: #1e1e1e;
+  font-size: 1.375rem;
+}
+p {
+  font-weight: 100;
+  color: #4e4e4e;
+  font-size: 1rem;
+}
+
+.service-box:hover .icon {
+  background-color: #0078ff;
+  box-shadow: 0 0 0 10px #cde1f8;
+}
+
+.service-box:hover .icon i {
+  color: #fff;
+}
+/* ------------------------------------Services---------------------------------- */
+
+/* ------------------------------------Milestone/Achivments---------------------- */
+
+.box3-bg {
+  position: relative;
+  padding: 8rem 0;
+  background-image: url(../Img/post-3.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+.m-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 1.55;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 0 10px #cde1f8;
+}
+/* ------------------------------------Milestone/Achivments---------------------- */
+
+/* ------------------------------------Work/Portfolio------------------------------- */
+.work-txt p {
+  color: #4e4e4e;
+  font-size: 0.8rem;
+}
+
+.work-txt p span {
+  color: #0078ff;
+}
+
+.work-txt a span {
+  position: absolute;
+  right: 5%;
+}
+
+.work-img {
+  overflow: hidden;
+}
+
+.work-img img {
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.box4-content:hover .work-img img {
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+}
+/* ------------------------------------Work/Portfolio------------------------------- */
+
+/* ------------------------------------Carousel------------------------------- */
+.box5-bg {
+  position: relative;
+  padding: 4rem 0;
+  background-image: url(../Img/overlay-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-inner img {
+  height: 150px;
+  width: 150px;
+}
+
+.carousel-inner h5 {
+  text-transform: uppercase;
+  color: white;
+}
+
+/* .carousel-inner p {
+  font-size: 1.25rem;
+  font-weight: 300;
+} */
+
+.carousel-indicators {
+  top: 100%;
+}
+
+/* ------------------------------------Carousel------------------------------- */
+/* ------------------------------------Blog------------------------------- */
+.mid-item {
+  position: absolute;
+  text-align: center;
+  top: -16px;
+  left: 15px;
+  right: 15px;
+  line-height: 25px;
+  overflow: hidden;
+}
+
+.mid-item-cont {
+  display: inline-block;
+  color: #fff;
+  padding: 0 15px 5px;
+  overflow: hidden;
+  background-color: #0078ff;
+  border-radius: 4px;
+}
+
+.mid-item-cont p {
+  color: #fff;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.1px;
+  margin-bottom: 0;
+}
+
+.tiny {
+  width: 30px;
+}
+
+.card {
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body a {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.card .card-footer .footer-auther a {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out !important;
+  -webkit-transition: all 0.3s ease-in-out !important;
+  -moz-transition: all 0.3s ease-in-out !important;
+  -ms-transition: all 0.3s ease-in-out !important;
+  -o-transition: all 0.3s ease-in-out !important;
+}
+
+.card-body a:hover {
+  color: #0078ff !important;
+}
+
+.card .card-footer .footer-auther:hover a {
+  color: #0078ff !important;
+}
+
+/* ------------------------------------Blog------------------------------- */
+
+/* ------------------------------------Comms------------------------------- */
+
+.box7-bg {
+  position: relative;
+  padding: 8rem 0;
+  background-image: url(../Img/overlay-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+.contact {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.box7 .container h3::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #0078ff;
+  width: 100px;
+  top: 35px;
+}
+
+.box7 .container h4::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #0078ff;
+  width: 80px;
+  top: 35px;
+}
+
+.btn:hover {
+  box-shadow: 0 0 0 4px #cde1f8;
+}
+
+.social .icon {
+  height: 40px;
+  width: 40px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  line-height: 1.6;
+  margin: 0 15px 0 0;
+  box-shadow: 0 0 0 3px #0078ff;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.social .icon i {
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.social .icon:hover {
+  background-color: #0078ff;
+  box-shadow: 0 0 0 3px #cde1f8;
+}
+
+.social .icon:hover i {
+  color: #fff !important;
+}
+
+/* ------------------------------------Comms------------------------------- */
+
+footer {
+  background-color: #0062d3;
+}
+
+.btp {
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #0078ff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.btp:hover {
+  background-color: #298eff;
+}
